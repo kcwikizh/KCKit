@@ -750,7 +750,8 @@ class Ship extends ItemBase {
 
     getExSlotOtherEquipments() {
         return vars.exSlotOtherEquipments.concat(
-            this.additional_exslot_item_ids || []
+            // this.additional_exslot_item_ids || []
+            this.getAdditionalExslotEquipIds()
         );
     }
 
@@ -856,6 +857,28 @@ class Ship extends ItemBase {
                 checkShip(this, special.ship)
             );
         return this.__specialAttack;
+    }
+
+    /** 获取该舰娘所有可放入补强增设栏位的装备ID */
+    getAdditionalExslotEquipIds() {
+        if (!this.__additionalExslotEquipIds)
+            this.__additionalExslotEquipIds = [
+                ...new Set([
+                    ...(this.additional_exslot_item_ids || []),
+                    ...(this.class
+                        ? getdb('ship_classes')[this.class]
+                              .additional_exslot_item_ids || []
+                        : []),
+                    ...(this.type
+                        ? getdb('ship_types')[this.type]
+                              .additional_exslot_item_ids || []
+                        : []),
+                ]),
+            ];
+        return this.__additionalExslotEquipIds;
+    }
+    get _additionalExslotEquipIds() {
+        return this.getAdditionalExslotEquipIds();
     }
 }
 

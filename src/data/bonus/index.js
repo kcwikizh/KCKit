@@ -55,10 +55,13 @@ const dataBonuses = [
 
     ...require('./大口径主砲/305mm／46'),
     ...require('./大口径主砲/320mm／44'),
+    ...require('./大口径主砲/14inch／45'),
     ...require('./大口径主砲/35.6cm連装砲(ダズル迷彩)'),
     ...require('./大口径主砲/35.6cm連装砲改'),
     ...require('./大口径主砲/35.6cm連装砲改二'),
     ...require('./大口径主砲/35.6cm三連装砲改(ダズル迷彩仕様)'),
+    ...require('./大口径主砲/35.6cm連装砲改三(ダズル迷彩仕様)'),
+    ...require('./大口径主砲/35.6cm連装砲改四'),
     ...require('./大口径主砲/38cm四連装砲'),
     ...require('./大口径主砲/41cm連装砲改二'),
     ...require('./大口径主砲/41cm三連装砲改二'),
@@ -160,6 +163,7 @@ const dataBonuses = [
     ...require('./艦上機/試製景雲(艦偵型)'),
 
     ...require('./電探/13号対空電探改'),
+    ...require('./電探/電探装備マスト'),
     ...require('./電探/21号対空電探'),
     ...require('./電探/21号対空電探改二'),
     ...require('./電探/42号対空電探改二'),
@@ -172,7 +176,7 @@ const dataBonuses = [
     ...require('./対潜兵装/四式水中聴音機'),
     ...require('./対潜兵装/三式爆雷投射機 集中配備'),
     ...require('./対潜兵装/試製15cm9連装対潜噴進砲'),
-    ...require('./対潜兵装/二式爆雷改二'),
+    ...require('./対潜兵装/二式爆雷'),
     ...require('./対潜兵装/RUR-4A'),
     ...require('./対潜兵装/対潜短魚雷'),
     ...require('./対潜兵装/Hedgehog'),
@@ -182,6 +186,7 @@ const dataBonuses = [
     ...require('./対空機銃/2cm 四連装FlaK 38'),
     ...require('./対空機銃/20連装7inch UP Rocket Launchers'),
     ...require('./対空機銃/25mm対空機銃'),
+    ...require('./対空機銃/25mm対空機銃増備'),
 
     ...require('./増設バルジ/新型高温高圧缶'),
     ...require('./増設バルジ/北方迷彩(＋北方装備)'),
@@ -201,6 +206,7 @@ const dataBonuses = [
     ...require('./その他/S-51J改'),
     ...require('./その他/一式戦 隼II型改'),
     ...require('./その他/一式戦 隼III型改'),
+    ...require('./その他/新型高温高圧缶'),
     ...require('./その他/探照灯'),
     ...require('./その他/96式150cm探照灯'),
     ...require('./その他/熟練見張員'),
@@ -209,6 +215,7 @@ const dataBonuses = [
     ...require('./その他/武装大発'),
     ...require('./その他/後期型潜水艦搭載電探＆逆探'),
     ...require('./その他/後期型電探＆逆探＋シュノーケル装備'),
+    ...require('./その他/発煙装置'),
 
     ...require('./specials'),
 ];

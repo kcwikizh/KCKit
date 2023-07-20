@@ -242,8 +242,8 @@ describe('Base functions/utilities', () => {
                 expect(db.ships[77]._extraIllust).toBe(undefined);
                 expect(db.ships[321]._extraIllust.length).toBe(8);
             });
-            it(`should 大淀・改 db.ships[321]._equipmentTypes be an Array of 26`, function () {
-                expect(db.ships[321]._equipmentTypes.length).toBe(27);
+            it(`should 大淀・改 db.ships[321]._equipmentTypes be an Array of 28`, function () {
+                expect(db.ships[321]._equipmentTypes.length).toBe(28);
             });
             it(`should 大淀・改 db.ships[321].canEquip(1) be true`, function () {
                 expect(db.ships[321].canEquip(1)).toBe(true);
@@ -379,7 +379,7 @@ describe('Base functions/utilities', () => {
             });
             it(`should 大和・改 db.ships[136].getExSlotOtherEquipments() be kckit.exslotEquipmentTypes`, function () {
                 expect(db.ships[136].getExSlotOtherEquipments()).toEqual(
-                    kckit.exSlotOtherEquipments.concat([71, 275])
+                    kckit.exSlotOtherEquipments.concat([71, 275, 483, 35, 317])
                 );
             });
             it(`should 熊野・改二 db.ships[504].getExSlotOtherEquipments() not be kckit.exslotEquipmentTypes`, function () {
@@ -523,7 +523,7 @@ describe('Base functions/utilities', () => {
                     expect(db.ships[156].getBonuses().length).toEqual(25);
                 });
                 it(`榛名改二 - N bonuses`, () => {
-                    expect(db.ships[151].getBonuses().length).toEqual(27);
+                    expect(db.ships[151].getBonuses().length).toEqual(40);
                 });
             });
             describe(`should Ship.prototype.getAACI() works`, () => {
@@ -731,17 +731,17 @@ describe('Base functions/utilities', () => {
                 it(`12.7cm単装高角砲(後期型) - 7 bonuses`, () => {
                     expect(db.items[229].getBonuses().length).toEqual(12);
                 });
-                it(`12.7cm連装砲D型改二 - 6 bonuses`, () => {
-                    expect(db.items[267].getBonuses().length).toEqual(12);
+                it(`12.7cm連装砲D型改二 - 13 bonuses`, () => {
+                    expect(db.items[267].getBonuses().length).toEqual(13);
                 });
                 it(`61cm三連装(酸素)魚雷後期型 - 7 bonuses`, () => {
-                    expect(db.items[285].getBonuses().length).toEqual(17);
+                    expect(db.items[285].getBonuses().length).toEqual(15);
                 });
                 it(`33号対水上電探 - N bonuses`, () => {
-                    expect(db.items[29].getBonuses().length).toEqual(50);
+                    expect(db.items[29].getBonuses().length).toEqual(53);
                 });
-                it(`15m二重測距儀+21号電探改二 - 10 bonuses`, () => {
-                    expect(db.items[142].getBonuses().length).toEqual(10);
+                it(`15m二重測距儀+21号電探改二 - 12 bonuses`, () => {
+                    expect(db.items[142].getBonuses().length).toEqual(15);
                 });
                 it(`41cm三连装炮改二`, () => {
                     expect(db.items[290].getBonuses().length).toEqual(8);
