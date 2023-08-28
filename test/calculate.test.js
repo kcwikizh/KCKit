@@ -3,6 +3,10 @@
 // const camelCase = require('camelcase')
 const dbnames = require('./samples/dbnames');
 const {
+    日向改,
+    日向改二,
+
+    榛名改,
     榛名改二乙,
 
     鈴谷航改二,
@@ -168,6 +172,15 @@ describe('Calculating functions/utilities', () => {
             });
             it('不知火改二 || 61cm四連装(酸素)魚雷後期型(MAX) ➕61cm四連装(酸素)魚雷後期型(⭐+5)', () => {
                 expect(calculate.bonus(567, [286, 286], [10, 5])).toEqual({
+                    fire: 1,
+                    torpedo: 6,
+                    evasion: 2,
+                });
+            });
+            it('不知火改二 || 61cm四連装(酸素)魚雷後期型(MAX) ➕61cm四連装(酸素)魚雷後期型(⭐+2) ➕61cm四連装(酸素)魚雷後期型(⭐+5)', () => {
+                expect(
+                    calculate.bonus(567, [286, 286, 286], [10, 2, 5])
+                ).toEqual({
                     fire: 1,
                     torpedo: 6,
                     evasion: 2,
@@ -1514,6 +1527,15 @@ describe('Calculating functions/utilities', () => {
                     hit: 1,
                 });
             });
+            it('大和改二重 || 零式水中聴音機⭐MAX | 零式水中聴音機 | 零式水中聴音機+5', () => {
+                expect(
+                    calculate.bonus(916, [132, 132, 132], [10, 0, 5])
+                ).toEqual({
+                    evasion: 1 + 2,
+                    asw: 3,
+                    hit: 1,
+                });
+            });
         });
 
         describe('その他...', () => {
@@ -1945,6 +1967,66 @@ describe('Calculating functions/utilities', () => {
                     calculate.bonus(536, [227, 227, 227], [0, 8, 10])
                 ).toEqual({
                     asw: 3,
+                });
+            });
+            it('榛名改二乙 || 新型高温高圧缶 + 新型高温高圧缶(+8) + 新型高温高圧缶(+6)', () => {
+                expect(
+                    calculate.bonus(榛名改二乙, [87, 87, 87], [0, 8, 6])
+                ).toEqual({
+                    torpedo: 2,
+                    evasion: 3,
+                });
+            });
+            it('時雨改三 || 水雷戦隊 熟練見張員 + 水雷戦隊 熟練見張員(+8) + 水雷戦隊 熟練見張員(+4)', () => {
+                expect(
+                    calculate.bonus(時雨改三, [412, 412, 412], [0, 8, 4])
+                ).toEqual({
+                    fire: 3,
+                    torpedo: 5,
+                    asw: 2,
+                    los: 2,
+                    evasion: 6,
+                });
+            });
+            describe('三式弾改二', () => {
+                it('日向改 || 三式弾改二 + 三式弾改二(+1) + 三式弾改二(+1)', () => {
+                    expect(
+                        calculate.bonus(日向改, [483, 483, 483], [0, 1, 1])
+                    ).toEqual({
+                        fire: 1,
+                        aa: 2,
+                        evasion: 2,
+                        hit: 1,
+                    });
+                });
+                it('日向改二 || 三式弾改二 + 三式弾改二(+10) + 三式弾改二(+1)', () => {
+                    expect(
+                        calculate.bonus(日向改二, [483, 483, 483], [0, 10, 1])
+                    ).toEqual({
+                        fire: 4,
+                        aa: 6,
+                        evasion: 6,
+                        hit: 4,
+                    });
+                });
+                it('榛名改 || 三式弾改二 + 三式弾改二(+2) + 三式弾改二(+5)', () => {
+                    expect(
+                        calculate.bonus(榛名改, [483, 483, 483], [0, 2, 5])
+                    ).toEqual({
+                        fire: 3,
+                        aa: 4,
+                        hit: 1,
+                    });
+                });
+                it('榛名改二乙 || 三式弾改二 + 三式弾改二(+8) + 三式弾改二(+5)', () => {
+                    expect(
+                        calculate.bonus(榛名改二乙, [483, 483, 483], [0, 8, 5])
+                    ).toEqual({
+                        fire: 5,
+                        aa: 10,
+                        evasion: 4,
+                        hit: 2,
+                    });
                 });
             });
         });
