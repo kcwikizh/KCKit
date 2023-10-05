@@ -15,7 +15,7 @@ const {
     CAV_Mogami,
     CAV_MogamiRevised,
     CAV_MogamiSuper,
-    group_CA_Navy_USN,
+    CA_Northampton
 } = require('../../ship-classes');
 
 const result = [];
@@ -37,7 +37,9 @@ const result = [];
     result.push({
         equipment,
         ship: {
-            isClass: [...group_CA_Navy_USN],
+            isClass: [
+                CA_Northampton,
+            ],
         },
         bonus: {
             fire: 2,
