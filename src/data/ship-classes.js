@@ -221,6 +221,13 @@ const group_DD_Navy_KM = [DD_1934];
 
 // ============================================================================
 //
+// DE
+//
+// ============================================================================
+const DE_Mikura = 123;
+
+// ============================================================================
+//
 // SS
 //
 // ============================================================================
@@ -236,6 +243,7 @@ const group_SS_Navy_USN = [SS_Gato, SS_Salmon];
 const Aux_LHA_特種船丙型 = 56;
 const Aux_AO_特2TL型 = 152;
 const Aux_AV_CTeste = 86;
+const Aux_AV_MogamiSuper = 168;
 const group_Aux_Navy_MN = [Aux_AV_CTeste];
 
 module.exports = {
@@ -261,6 +269,7 @@ module.exports = {
     BB_Nevada,
     BB_Iowa,
     BB_SouthDakota,
+    BB_NorthCarolina,
     BB_QueenElizabeth,
     BB_Nelson,
     BB_Richelieu,
@@ -395,6 +404,9 @@ module.exports = {
     group_DD_Navy_KM,
 
     // ========================================================================
+    DE_Mikura,
+
+    // ========================================================================
     AV_Nisshin: 118,
     AV_CommandantTeste: 86,
     AV_Mizuho: 77,
@@ -410,6 +422,7 @@ module.exports = {
     Aux_LHA_特種船丙型,
     Aux_AO_特2TL型,
     Aux_AV_CTeste,
+    Aux_AV_MogamiSuper,
     group_Aux_Navy_MN,
 
     // ========================================================================
